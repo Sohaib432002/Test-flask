@@ -8,5 +8,5 @@ SQLAlchemy==1.4.32
 kombu==5.2.4  
 Flask==2.0.3
 Werkzeug==2.0.3
-
+joblib==1.2.0
 
