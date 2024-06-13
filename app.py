@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 app=Flask(__name__)
 model_path = 'model/model.pkl'
-model=joblib.load(model_path)
+model=joblib.load(model_path,'rb')
 
 @app.route('/')
 def home():
