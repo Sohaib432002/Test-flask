@@ -2,8 +2,8 @@ from flask import render_template,Flask,request,redirect,url_for
 import joblib
 import numpy as np
 app=Flask(__name__)
-
-model=joblib.load('svc_SONAR_model.pkl')
+model_path = 'model/model.pkl'
+model=joblib.load(model_path)
 
 @app.route('/')
 def home():
