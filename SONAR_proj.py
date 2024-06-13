@@ -64,5 +64,7 @@ prediction_SVC=svc.predict(input_data2_reshape)
 
 print(prediction_SVC)
 
+joblib.dump(model, 'svc_SONAR_model.pkl')
+
 
 
