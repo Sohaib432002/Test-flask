@@ -2,8 +2,11 @@ from flask import render_template,Flask,request,redirect,url_for
 import joblib
 import numpy as np
 app=Flask(__name__)
-model_path = 'model/model.pkl'
-model=joblib.load(model_path,'rb')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, 'model', 'model.pkl')
+
+# Load the model during app startup
+model = joblib.load(model_path)
 
 @app.route('/')
 def home():
