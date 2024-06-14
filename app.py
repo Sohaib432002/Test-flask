@@ -1,6 +1,7 @@
 from flask import render_template,Flask,request,redirect,url_for
 import joblib
 import numpy as np
+import os
 app=Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(BASE_DIR, 'model', 'model.pkl')
